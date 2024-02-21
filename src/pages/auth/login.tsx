@@ -61,10 +61,10 @@ const LoginPage = () => {
                 } */}
 
           <div>
-            <h6 className="text-primary font-semibold text-2xl">
+            <h6 className="text-primary font-semibold text-2xl text-left">
               Welcome Back
             </h6>
-            <p className="text-secondary1 font-medium text-sm mt-1">
+            <p className="text-secondary1 font-medium text-sm mt-1 text-left">
               Enter your Credentials below to get Started{" "}
             </p>
           </div>
@@ -94,7 +94,7 @@ const LoginPage = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block mb-2 text-secondary text-sm font-medium"
+                    className="block mb-2 text-secondary text-sm font-medium text-left "
                   >
                     Email Address
                   </label>
@@ -124,7 +124,7 @@ const LoginPage = () => {
                 <div className="mt-5">
                   <label
                     htmlFor="password"
-                    className="block mb-2 text-secondary text-sm font-medium"
+                    className="block mb-2 text-secondary text-sm font-medium text-left"
                   >
                     Password
                   </label>
