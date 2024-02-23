@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { 
+  //useEffect, 
+  useState } from "react";
 
 import warning from "../../assets/icons/warning.svg";
 
 import { Formik, Form, FormikHelpers } from "formik";
 import { loginValidator } from "../../validationSchema/validator";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, 
+  //useNavigate
+ } from "react-router-dom";
 import eye from "../../assets/icons/eye.svg";
 import eye_off from "../../assets/icons/eye-off.svg";
 import logo from "../../assets/icons/logo.jpg";
 
 
 const LoginPage = () => {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     //const dispatch = useAppDispatch();
 
     interface Values {
@@ -46,10 +50,10 @@ const LoginPage = () => {
     return (
         <>
               <div className="px-6 md:px-10 py-8 relative overflow-hidden">
-        <div className="hidden md:block absolute -top-20 -right-24 bg-[#DBFFDF] w-[450px] h-[450px] rounded-full blur-[150px]"></div>
+        <div className="hidden md:block absolute -top-20 -right-24 bg-[#DBFF] w-[450px] h-[450px] rounded-full blur-[150px]"></div>
         <div className="flex justify-between">
           <div>
-            <img src={logo} alt="logo" className="md:w-[129px] md:h-[40px]" />
+            <img src={logo} alt="logo" className="w-[60px] h-[60px] md:w-[60px] md:h-[60px] lg:h-[90px] lg:w-[90px]" />
           </div>
           <div className="z-10"></div>
         </div>
@@ -64,7 +68,7 @@ const LoginPage = () => {
             <h6 className="text-primary font-semibold text-2xl text-left">
               Welcome Back
             </h6>
-            <p className="text-secondary1 font-medium text-sm mt-1 text-left">
+            <p className="text-secondary1 font-normal text-sm mt-1 text-left">
               Enter your Credentials below to get Started{" "}
             </p>
           </div>
@@ -104,8 +108,8 @@ const LoginPage = () => {
                     placeholder="Email Address"
                     className={
                       touched.email && errors.email
-                        ? "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4"
-                        : "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4"
+                        ? "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4"
+                        : "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#98A2B3] bg-white py-3 px-4"
                     }
                     value={values.email}
                     onChange={handleChange}
@@ -114,7 +118,7 @@ const LoginPage = () => {
                   {touched.email && errors.email ? (
                     <div className="flex">
                       <img src={warning} className="" alt="warning" />
-                      <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                      <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                         {touched.email && errors.email}
                       </small>
                     </div>
@@ -136,8 +140,8 @@ const LoginPage = () => {
                       placeholder="Password"
                       className={
                         touched.password && errors.password
-                          ? "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335]text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4"
-                          : "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4"
+                          ? "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335]text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4"
+                          : "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#98A2B3] bg-white py-3 px-4"
                       }
                       value={values.password}
                       onChange={handleChange}
@@ -153,16 +157,16 @@ const LoginPage = () => {
                   {touched.password && errors.password ? (
                     <div className="flex">
                       <img src={warning} className="" alt="warning" />
-                      <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                      <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                         {touched.password && errors.password}
                       </small>
                     </div>
                   ) : null}
                 </div>
-                <div className="mt-2">
+                <div className=" text-left">
                   <Link
                     to="/forgot-password"
-                    className="text-secondary font-medium text-xs"
+                    className="text-[#484747] text-left font-medium text-[10px]"
                   >
                     Forgot your password?
                   </Link>
@@ -172,18 +176,18 @@ const LoginPage = () => {
                   <button
                     type="submit"
                     //disabled={loading}
-                    className="bg-primary disabled:bg-[#ABB6AC] rounded-lg w-full py-4 text-white font-medium hover:bg-[#24752B] transition-all text-sm"
+                  className="bg-[#9437f1] disabled:bg-[#dbc7ef] rounded-lg w-full py-4 text-white font-medium hover:bg-[#c08ff0] transition-all text-sm"
                   >
                     Log In
                   </button>
                 </div>
 
                 <div className="text-center mt-3">
-                  <p className="text-[#344335] text-sm font-semibold">
+                  <p className="text-[#344335]   text-sm font-semibold">
                     Don’t have an account?{" "}
                     <Link
                       to="/signup"
-                      className="text-primary font-semibold text-sm"
+                      className="text-[#9F50ED] font-semibold text-sm  hover:text-[#c08ff0] "
                     >
                       Sign Up
                     </Link>{" "}
