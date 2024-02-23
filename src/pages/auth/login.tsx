@@ -50,7 +50,7 @@ const LoginPage = () => {
     return (
         <>
               <div className="px-6 md:px-10 py-8 relative overflow-hidden">
-        <div className="hidden md:block absolute -top-20 -right-24 bg-[#DBFF] w-[450px] h-[450px] rounded-full blur-[150px]"></div>
+        <div className="hidden md:block absolute -top-20 -right-24 bg-[#efe6f8] w-[450px] h-[450px] rounded-full blur-[150px]"></div>
         <div className="flex justify-between">
           <div>
             <img src={logo} alt="logo" className="w-[60px] h-[60px] md:w-[60px] md:h-[60px] lg:h-[90px] lg:w-[90px]" />
