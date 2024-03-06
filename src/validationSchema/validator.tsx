@@ -54,3 +54,10 @@ export const registerSupplierValidator = Yup.object({
     /^-?[0-9]+(.[0-9]{1-7})?$/,
     "Enter a valid BVN Number")
 });
+
+export const supplierValidator = Yup.object({
+  supplier_name: Yup.string().required("Supplier Name is required"),
+  company_name: Yup.string().required("Company Name is required"),
+  buiness_registeration_number: Yup.string(),
+  estimate_inventory_capaility: Yup.string(),
+}) 

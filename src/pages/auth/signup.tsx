@@ -112,10 +112,10 @@ const Signup = () => {
           </div>
 
           <div className="mt-7">
-            <h6 className="text-primary font-semibold text-xl">
+            <h6 className="text-[#9F50ED] font-semibold text-xl text-left">
               Create Account
             </h6>
-            <p className="text-secondary1 font-medium text-sm mt-1">
+            <p className="text-[#433443] font-medium text-sm mt-1 text-left">
               Enter your Credentials to create your account{" "}
             </p>
           </div>
@@ -147,13 +147,13 @@ const Signup = () => {
               touched,
               errors,
             }) => (
-              <Form onSubmit={() => handleChangePage (values)}>
+              <Form className="mt-8" onSubmit={() => handleChangePage (values)}>
                 <>
                 <div className="grid md:grid-cols-2 md:gap-6 mt-4">
                   <div>
                     <label
                       htmlFor="first_name"
-                      className="block mb-2 text-secondary text-sm font-medium"
+                      className="block mb-2 text-secondary text-sm font-medium text-left"
                     >
                       First name
                     </label>
@@ -165,15 +165,15 @@ const Signup = () => {
                       onChange={handleChange}
                       className={
                         touched.firstName && errors.firstName
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#98A2B3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur}
                     />
                      {touched.firstName && errors.firstName? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.firstName && errors.firstName}
                         </small>
                       </div>
@@ -181,7 +181,7 @@ const Signup = () => {
 
                   </div>
                   <div>
-                    <label className="block mb-2 text-secondary text-sm font-medium">
+                    <label className="block mb-2 text-secondary text-sm font-medium text-left">
                       Last name
                     </label>
                     <input
@@ -192,15 +192,15 @@ const Signup = () => {
                       onChange={handleChange}
                       className={
                         touched.lastName && errors.lastName
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur}
                     />
                     {touched.lastName && errors.lastName? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.lastName && errors.lastName}
                         </small>
                       </div>
@@ -208,7 +208,7 @@ const Signup = () => {
                   </div>
                 </div>
                 <div className="mt-5">
-                  <label className="block mb-2 text-secondary text-sm font-medium">
+                  <label className="block mb-2 text-secondary text-sm font-medium text-left">
                     Email Address
                   </label>
                   <div className='relative'>
@@ -219,8 +219,8 @@ const Signup = () => {
                     onChange={handleChange}
                     className={
                         touched.email && errors.email
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                     onBlur={handleBlur}
                   />
@@ -228,16 +228,15 @@ const Signup = () => {
                    {touched.email && errors.email ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.email && errors.email}
                         </small>
                       </div>
                     ) : null}
                 </div>
-              
-
-                <div className="mt-5">
-                  <label className="block mb-2 text-secondary text-sm font-medium">
+                <div className="grid md:grid-cols-2 md:gap-6 mt-4">
+                <div>
+                  <label className="block mb-2 text-secondary text-sm font-medium text-left">
                     Phone Number
                   </label>
                   <input
@@ -248,22 +247,22 @@ const Signup = () => {
                     onChange={handleChange}
                     className={
                         touched.phoneNumber && errors.phoneNumber
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur}
                   />
                   {touched.phoneNumber && errors.phoneNumber ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.phoneNumber && errors.phoneNumber}
                         </small>
                       </div>
                     ) : null}
                 </div>
-                <div className="mt-5">
-                  <label className="block mb-2 text-secondary text-sm font-medium">
+                <div>
+                  <label className="block mb-2 text-secondary text-sm font-medium text-left">
                     Date of Birth
                   </label>
                   <div className="relative">
@@ -275,8 +274,8 @@ const Signup = () => {
                       onChange={handleChange}
                       className={
                         touched.date_of_birth && errors.date_of_birth
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur}
                     />
@@ -284,14 +283,15 @@ const Signup = () => {
                     {touched.date_of_birth && errors.date_of_birth ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.date_of_birth && errors.date_of_birth}
                         </small>
                       </div>
                     ) : null}
                 </div>
+              </div>
                 <div className="mt-5">
-                  <label className="block mb-2 text-secondary text-sm font-medium">
+                  <label className="block mb-2 text-secondary text-sm font-medium text-left">
                     Password
                   </label>
                   <div className="relative">
@@ -303,8 +303,8 @@ const Signup = () => {
                       onChange={handleChange}
                       className={
                         touched.password && errors.password
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur}
                     />
@@ -318,14 +318,14 @@ const Signup = () => {
                     {touched.password && errors.password ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.password && errors.password}
                         </small>
                       </div>
                     ) : null}
                 </div>
                 <div className="mt-5">
-                  <label className="block mb-2 text-secondary text-sm font-medium">
+                  <label className="block mb-2 text-secondary text-sm font-medium text-left">
                     Confirm Password
                   </label>
                   <div className="relative">
@@ -337,8 +337,8 @@ const Signup = () => {
                       onChange={handleChange}
                       className={
                         touched.confirm_password && errors.confirm_password
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur}
                     />
@@ -352,7 +352,7 @@ const Signup = () => {
                   {touched.confirm_password && errors.confirm_password ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.confirm_password && errors.confirm_password}
                         </small>
                       </div>
@@ -401,7 +401,7 @@ const Signup = () => {
                 }) => (
                   <Form onSubmit={handleSubmit}>
                   <div className="mt-5">
-                    <label className="block mb-2 text-secondary text-sm font-medium">
+                    <label className="block mb-2 text-secondary text-sm font-medium text-left">
                       BVN
                     </label>
                     <input
@@ -412,14 +412,14 @@ const Signup = () => {
                       onChange={handleChange}
                       className={
                         touched.bvn && errors.bvn
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335]text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443]text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur} />
                       {touched.bvn && errors.bvn ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.bvn && errors.bvn}
                         </small>
                       </div>
@@ -427,7 +427,7 @@ const Signup = () => {
                   </div>
 
                   <div className="mt-5">
-                    <label className="block mb-2 text-secondary text-sm font-medium">
+                    <label className="block mb-2 text-secondary text-sm font-medium text-left">
                       Bank
                     </label>
                     <input
@@ -438,21 +438,21 @@ const Signup = () => {
                       onChange={handleChange}
                       className={
                         touched.bank_name && errors.bank_name
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335]text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443]text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur} />
                       {touched.bank_name && errors.bank_name ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.bank_name && errors.bank_name}
                         </small>
                       </div>
                     ) : null}
                   </div>
                   <div className="mt-5">
-                    <label className="block mb-2 text-secondary text-sm font-medium">
+                    <label className="block mb-2 text-secondary text-sm font-medium text-left">
                       Account Number
                     </label>
                     <div className="relative">
@@ -466,26 +466,26 @@ const Signup = () => {
                       }}
                       className={
                         touched.account_number && errors.account_number
-                          ? 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335]text-base focus:border-[#B92043] focus:outline-none rounded-lg border border-[#B92043] bg-white py-3 px-4'
-                          : 'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          ? 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443]text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4'
+                          : 'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                       }
                       onBlur={handleBlur}
                     />
                     </div>
                     {/* <div className='absolute top-1/2 transfrom -translate-y-1/2 right-4 cursor-pointer nimate-spin'>
-                  <AutorenewIcon style={{width: 20, height: 20, color: "#2B8C34"}} />
+                  <AutorenewIcon style={{width: 20, height: 20, color: "#BDB4FE"}} />
                   </div> */}
                     {touched.account_number && errors.account_number ? (
                       <div className="flex">
                         <img src={warning} className="" alt="warning" />
-                        <small className="text-[#B92043] font-medium text-xs pl-[5.65px] pt-[4px]">
+                        <small className="text-[#d53502] font-medium text-xs pl-[5.65px] pt-[4px]">
                           {touched.account_number && errors.account_number}
                         </small>
                       </div>
                     ) : null}
                   </div>
                   <div className="mt-5">
-                    <label className="block mb-2 text-secondary text-sm font-medium">
+                    <label className="block mb-2 text-secondary text-sm font-medium text-left">
                       Account Name
                     </label>
                     <input
@@ -493,16 +493,17 @@ const Signup = () => {
                       name="account_name"
                       placeholder="Account Name"
                       className=
-                          'appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#2B8C34] focus:outline-none focus:shadow-input rounded-lg border border-[#96A397] bg-white py-3 px-4'
+                          'appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#a296a3] bg-white py-3 px-4'
                     />
                   </div>
                   <div className="mt-6">
                   <button
                     type="submit"
+
                     //disabled={loading} //hover color is #24752B
-                    className="bg-primary disabled:bg-[#ABB6AC] rounded-lg w-full py-4 text-white font-medium hover:bg-[#24752B] transition-all text-sm"
+                    className="bg-[#9437f1] disabled:bg-[#dbc7ef] rounded-lg w-full py-4 text-white font-medium hover:bg-[#c08ff0] transition-all text-sm"
                   >
-                    SignUp
+                    Sign Up
                   </button>
                 </div>
                     </Form>
@@ -513,7 +514,7 @@ const Signup = () => {
 
             
             <div className='text-center mt-3'>
-              <p className='text-[#344335] text-sm font-semibold'>Already have an account? <Link to="/" className='text-primary font-semibold text-sm'>Log in</Link> </p>
+              <p className='text-[#433443] text-sm font-semibold'>Already have an account? <Link to="/" className='text-[#9F50ED] font-semibold text-sm'>Log in</Link> </p>
             </div>
         </div>
 
