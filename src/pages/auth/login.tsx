@@ -1,6 +1,4 @@
-import React, { 
-  //useEffect, 
-  useState } from "react";
+import React, { useState } from "react";
 
 import warning from "../../assets/icons/warning.svg";
 
@@ -108,8 +106,8 @@ const LoginPage = () => {
                     placeholder="Email Address"
                     className={
                       touched.email && errors.email
-                        ? "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4"
-                        : "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#98A2B3] bg-white py-3 px-4"
+                        ? "appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443] text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4"
+                        : "appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#98A2B3] bg-white py-3 px-4"
                     }
                     value={values.email}
                     onChange={handleChange}
@@ -140,8 +138,8 @@ const LoginPage = () => {
                       placeholder="Password"
                       className={
                         touched.password && errors.password
-                          ? "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm  text-[#344335]text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4"
-                          : "appearance-none w-full placeholder:text-[#96A397] placeholder:text-sm text-[#344335] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#98A2B3] bg-white py-3 px-4"
+                          ? "appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm  text-[#433443]text-base focus:border-[#d53502] focus:outline-none rounded-lg border border-[#d53502] bg-white py-3 px-4"
+                          : "appearance-none w-full placeholder:text-[#a296a3] placeholder:text-sm text-[#433443] text-base focus:border-[#BDB4FE] focus:outline-none focus:shadow-input rounded-lg border border-[#98A2B3] bg-white py-3 px-4"
                       }
                       value={values.password}
                       onChange={handleChange}
@@ -166,7 +164,7 @@ const LoginPage = () => {
                 <div className=" text-left">
                   <Link
                     to="/forgot-password"
-                    className="text-[#484747] text-left font-medium text-[10px]"
+                    className="text-[#484748] text-left font-medium text-[10px]"
                   >
                     Forgot your password?
                   </Link>
@@ -183,13 +181,13 @@ const LoginPage = () => {
                 </div>
 
                 <div className="text-center mt-3">
-                  <p className="text-[#344335]   text-sm font-semibold">
+                  <p className="text-[#433443]   text-sm font-semibold">
                     Don’t have an account?{" "}
                     <Link
-                      to="/signup"
+                      to="/sign-up"
                       className="text-[#9F50ED] font-semibold text-sm  hover:text-[#c08ff0] "
                     >
-                      Sign Up
+                      SignUp
                     </Link>{" "}
                   </p>
                 </div>

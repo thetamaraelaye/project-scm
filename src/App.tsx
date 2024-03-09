@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import logo from './logo.svg';
 import LoginPage from './pages/auth/login';
-
 import './App.css';
+import Signup from './pages/auth/signup';
 
 function App() {
   return (
@@ -25,6 +24,7 @@ function App() {
       <Router>
         <Routes>
          <Route path="/" element={<LoginPage />} />
+         <Route path="/sign-up" element={<Signup />} />
         </Routes>
       </Router>
     </div>
