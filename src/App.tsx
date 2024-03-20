@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from './pages/auth/login';
 import './App.css';
 import Signup from './pages/auth/signup';
-
+import DashboardPage from './pages/admin/dashboard';
+import Sidebar from './component/Sidebar';
+// import AdminRoute from './component/PrivateRoutes/AdminRoutes';
 function App() {
   return (
     <div className="App">
@@ -25,6 +27,14 @@ function App() {
         <Routes>
          <Route path="/" element={<LoginPage />} />
          <Route path="/sign-up" element={<Signup />} />
+
+         {/* <Route path="/" element={<DashboardPage/>} /> */}
+         <Route
+            path="admin/dashboard"
+            element={
+                <Sidebar title="Dashboard" children={<DashboardPage />} />
+            }
+          />
         </Routes>
       </Router>
     </div>
