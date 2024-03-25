@@ -363,7 +363,7 @@ const Signup = () => {
                   <button
                     type="submit"
                     // disabled={"#dbc7ef"}
-                    className="disabled:bg-[#dbc7ef]  hover:bg-[#9437f1] transition-all text-sm bg-[#9437f1]  rounded-lg w-full py-4 text-white font-medium"
+                    className="disabled:bg-[#dbc7ef]  hover:bg-[#95d0f0fd] transition-all text-sm bg-[#0595E3]  rounded-lg w-full py-4 text-[#F2F5F7] font-medium"
                   >
                     Continue
                   </button>
