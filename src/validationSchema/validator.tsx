@@ -56,8 +56,10 @@ export const registerSupplierValidator = Yup.object({
 });
 
 export const supplierValidator = Yup.object({
-  supplier_name: Yup.string().required("Supplier Name is required"),
+  contact_email: Yup.string().required("Contact Email is required"),
   company_name: Yup.string().required("Company Name is required"),
   buiness_registeration_number: Yup.string(),
   estimate_inventory_capaility: Yup.string(),
+  etimate_clientele: Yup.string(),
+  business_phone_number: Yup.string().required("Business Phone Number is required"),
 }) 
