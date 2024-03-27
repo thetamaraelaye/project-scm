@@ -15,7 +15,7 @@ const DashboardPage = () => {
               </div>
             </div>
             <div className="border-r border-l  flex flex-col border-white w-[30%] px-4">
-                <div></div>
+              <div></div>
               <strong className="font-bold text-3xl">120</strong>
               <p className="text-xs font-normal">Active Orders</p>
             </div>
@@ -37,7 +37,7 @@ const DashboardPage = () => {
             </div>
           </div>
         </div>
-        <SalesOverview/>
+        <SalesOverview />
       </div>
     </>
   );
