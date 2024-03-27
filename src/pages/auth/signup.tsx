@@ -1,5 +1,8 @@
-import React, { useState} from 'react'
-import { registerUserValidatorStepOne, registerUserValidatorStepTwo } from '../../validationSchema/validator'
+import React, { useState } from "react";
+import {
+  registerUserValidatorStepOne,
+  registerUserValidatorStepTwo,
+} from "../../validationSchema/validator";
 import eye from "../../assets/icons/eye.svg";
 import eye_off from "../../assets/icons/eye-off.svg";
 import logo from "../../assets/icons/logo.jpg";
@@ -9,13 +12,12 @@ import arrow_prev from "../../assets/icons/arrow_prev.svg";
 import warning from "../../assets/icons/warning.svg";
 
 const Signup = () => {
-
   const [passwordShown, setPasswordShown] = useState(false);
   const [passwordConfirmShown, setPasswordConfirmShown] = useState(false);
 
   const [step1Values, setStep1Values] = useState({
-    firstName: '',
-    lastName: '',
+    firstName: "",
+    lastName: "",
     phoneNumber: "",
     date_of_birth: "",
     email: "",
@@ -45,11 +47,9 @@ const Signup = () => {
     setPage(1);
   };
 
-  
-
   const handleChangePage = (values: Values) => {
-    console.log(values)
-    setStep1Values(values)
+    console.log(values);
+    setStep1Values(values);
     setPage(2);
     // setText('Sign Up')
   };
@@ -62,7 +62,6 @@ const Signup = () => {
   };
 
   //second step of the form
-
 
   const handleSubmit = (values: OtherEmployeeDetails) => {
     // dispatch(
@@ -533,6 +532,6 @@ const Signup = () => {
       </div>
     </>
   );
-}
+};
 
 export default Signup;
