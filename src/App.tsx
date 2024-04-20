@@ -4,7 +4,7 @@ import LoginPage from "./pages/auth/login";
 import "./App.css";
 import Signup from "./pages/auth/signup";
 import DashboardPage from "./pages/admin/dashboard";
-import Sidebar from "./component/Sidebar";
+import Sidebar from "./component/SideBar/Sidebar";
 import SetUpAccount from "./pages/auth/setUpAccount";
 // import AdminRoute from './component/PrivateRoutes/AdminRoutes';
 function App() {
