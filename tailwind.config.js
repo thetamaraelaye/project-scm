@@ -12,7 +12,7 @@ module.exports = {
         primaryhover: "#c08ff0",
         secondary: "#484748",
         secondary1: "#433443",
-        tertiary: "#7C8D7E",
+        tertiary: "#7C8D7E", //not yet
         primarydisabled: "#dbc7ef",
         //f5edf7
       },
