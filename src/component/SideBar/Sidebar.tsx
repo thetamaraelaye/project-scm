@@ -1,22 +1,22 @@
 import React from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import logo from "../assets/icons/logo.jpg";
-import notification_icon from "../assets/icons/notification.svg";
-import logout_icon from "../assets/icons/logout.svg";
-import product_active from "../assets/icons/product_new.svg";
-import ProductIcon from "../assets/icons/product.svg";
-import dashboard_active from "../assets/icons/dashboard.svg";
-import DashboardIcon from "../assets/icons/dashboard_white.svg";
-import cashflow_active from "../assets/icons/cashflow_new.svg";
-import CashflowIcon from "../assets/icons/cashflow.svg";
-import inventory_active from "../assets/icons/inventory_new.svg";
-import InventoryIcon from "../assets/icons/inventory.svg";
+import logo from "../../assets/icons/logo.jpg";
+import notification_icon from "../../assets/icons/notification.svg";
+import logout_icon from "../../assets/icons/logout.svg";
+import product_active from "../../assets/icons/product_new.svg";
+import ProductIcon from "../../assets/icons/product.svg";
+import dashboard_active from "../../assets/icons/dashboard.svg";
+import DashboardIcon from "../../assets/icons/dashboard_white.svg";
+import cashflow_active from "../../assets/icons/cashflow_new.svg";
+import CashflowIcon from "../../assets/icons/cashflow.svg";
+import inventory_active from "../../assets/icons/inventory_new.svg";
+import InventoryIcon from "../../assets/icons/inventory.svg";
 // import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 // import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import report_active from "../assets/icons/reports_new.svg";
-import ReportIcon from "../assets/icons/reports.svg";
-import SupplierIcon from "../assets/icons/supplier.svg";
-import supplier_active from "../assets/icons/supplier_new.svg";
+import report_active from "../../assets/icons/reports_new.svg";
+import ReportIcon from "../../assets/icons/reports.svg";
+import SupplierIcon from "../../assets/icons/supplier.svg";
+import supplier_active from "../../assets/icons/supplier_new.svg";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 type sidebarType = {
