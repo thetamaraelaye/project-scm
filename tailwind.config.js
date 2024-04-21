@@ -15,6 +15,7 @@ module.exports = {
         secondary2: "#a096a3",
         tertiary: "#7C8D7E", //not yet
         primarydisabled: "#dbc7ef",
+        warning: "#d53502",
         //f5edf7
       },
       boxShadow: {
