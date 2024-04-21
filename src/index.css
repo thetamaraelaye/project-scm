@@ -17,3 +17,204 @@ body {
     monospace;
 } */
 
+/* react select custom styles */
+.select_style .select_control__control {
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #a096a3;
+  color: #333333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 48px;
+  width: 100%;
+}
+
+.select_style .select_control__control:hover {
+  border: 1px solid #dbc7ef !important;
+  box-shadow: none !important;
+}
+
+.select_control__menu .select_control__menu-list .select_control__option {
+  cursor: pointer;
+  font-size: 14px;
+  color: #333333;
+}
+
+.select_control__indicator-separator {
+  display: none !important;
+}
+
+.select_control__multi-value {
+  background-color: #9f50ed !important;
+  border-radius: 4px !important;
+}
+.select_control__multi-value__label {
+  color: #9437f1 !important;
+  font-weight: 500 !important;
+}
+
+.select_control__multi-value__remove {
+  color: #9437f1 !important;
+}
+
+.select_control__multi-value__remove:hover {
+  background-color: #a7eaad !important;
+}
+
+/* Badges */
+.success-badge {
+  background: #9f50ed;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #9437f1;
+  padding: 4px 16px;
+  gap: 2px;
+  width: fit-content;
+}
+
+.pending-badge {
+  background: #fff3ce;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #d5a407;
+  padding: 4px 16px;
+  gap: 2px;
+  width: fit-content;
+}
+
+.error-badge {
+  background: #fdded4;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #b92043;
+  padding: 4px 16px;
+  gap: 2px;
+  width: fit-content;
+}
+
+.dispatched-badge {
+  background: #C9F7FC;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0066AF;
+  padding: 4px 16px;
+  gap: 2px;
+  width: fit-content;
+}
+
+.done-badge {
+  background: #ECEEEC;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #484748;
+  padding: 4px 16px;
+  gap: 2px;
+  width: fit-content;
+}
+
+.paid-badge {
+  background: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #a096a3;
+  padding: 4px 16px;
+  gap: 2px;
+  width: fit-content;
+}
+
+.pay-badge {
+  background: #9437F1;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  padding: 4px 16px;
+  gap: 2px;
+  width: fit-content;
+}
+ 
+.ct-toast-success{
+  background: #9437F1;
+  color: white;
+}
+
+.campaignScroll::-webkit-scrollbar {
+  width: 0.5px;
+}
+.call2orderOverflow::-webkit-scrollbar {
+  width: 6px;
+}
+.call2orderOverflow::-webkit-scrollbar-track {
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+/* Handle */
+.call2orderOverflow::-webkit-scrollbar-thumb {
+  background: #fff;
+    border-radius: 8px;
+}
+
+/* width */
+.sidebar_scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sidebar_scroll::-webkit-scrollbar-track {
+  background: #f7f7f7;
+}
+
+/* Handle */
+.sidebar_scroll::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+.sidebar_scroll::-webkit-scrollbar-thumb:hover {
+  background: #f7f7f7;
+}
+
+.farmers_scroll::-webkit-scrollbar {
+  width: 1px;
+}
+
+input[type="radio"] {
+  /* The native appearance is hidden */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* For a circular appearance we need a border-radius. */
+  border-radius: 50%;
+
+  /* The background will be the radio dot's color. */
+  background: #FFFFFF;
+
+  /* The border will be the spacing between the dot and the outer circle */
+  border: 1px solid #a096a3;
+
+  /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+  box-shadow: 0 0 0 1px #a096a3;
+  
+}
+
+input[type="radio"]:checked {
+  box-shadow: 0 0 0 1px #9437F1;
+  background-color: #9437F1;
+  border: 3px solid #fff;
+}
