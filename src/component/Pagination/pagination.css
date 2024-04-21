@@ -1,0 +1,114 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+}
+
+.pagination-container .pagination-item {
+  text-align: center;
+  margin: 0px 8px;
+  color: #6f5c71;
+  font-weight: 500;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid #bdbdbd;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.showNumber {
+  color: #6f5c71;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.pagination-container .pagination-item.dots:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination-container .pagination-item:hover {
+  background-color: transparent;
+  color: "#9437f1";
+  cursor: pointer;
+}
+
+.pagination-container .pagination-item.selected {
+  background-color: "#9437f1";
+  color: #fff;
+  border: none;
+}
+
+.pagination-container .pagination-item .arrow::before {
+  position: relative;
+  /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+  content: "";
+  /* By using an em scale, the arrows will size with the font */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.12em solid #323232;
+  border-top: 0.12em solid #323232;
+}
+
+.pagination-container .pagination-item .arrow.left {
+  transform: rotate(-135deg) translate(-50%);
+}
+
+.pagination-container .pagination-item .arrow.right {
+  transform: rotate(45deg);
+}
+
+.pagination-container .pagination-item.disabled {
+  pointer-events: none;
+}
+
+.pagination-container .pagination-item.disabled .arrow::before {
+  border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+
+.pagination-container .pagination-item.disabled .arrow:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.show_div {
+  color: #000000;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 20px;
+  display: none;
+}
+.show_number {
+  background: #f4eff6;
+  border-radius: 6px;
+  padding: 8px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+}
+
+/* ------------------MEDIA QUERY SECTION ------------------------- */
+/* Media query for tablets and screens higher */
+@media (min-width: 768px) {
+  .show_div {
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 20px;
+    display: block;
+  }
+  .show_number {
+    background: "#9437f1";
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px;
+    line-height: 20px;
+    letter-spacing: 0.75px;
+  }
+}

@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import logo from './logo.svg';
-import LoginPage from './pages/auth/login';
-
-import './App.css';
-
+import LoginPage from "./pages/auth/login";
+import "./App.css";
+import Signup from "./pages/auth/signup";
+import DashboardPage from "./pages/admin/dashboard";
+import Sidebar from "./component/SideBar/Sidebar";
+import SetUpAccount from "./pages/auth/setUpAccount";
+// import AdminRoute from './component/PrivateRoutes/AdminRoutes';
 function App() {
   return (
     <div className="App">
@@ -24,7 +26,15 @@ function App() {
       </header> */}
       <Router>
         <Routes>
-         <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/sign-up" element={<Signup />} />
+          <Route path="/setup-supplier-account" element={<SetUpAccount />} />
+
+          {/* <Route path="/" element={<DashboardPage/>} /> */}
+          <Route
+            path="admin/dashboard"
+            element={<Sidebar title="Dashboard" children={<DashboardPage />} />}
+          />
         </Routes>
       </Router>
     </div>
