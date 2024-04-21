@@ -10,8 +10,8 @@ module.exports = {
         primary: "#9437f1",
         primary1: "#9F50ED",
         primaryhover: "#c08ff0",
-        secondary: "#484748",
-        secondary1: "#433443",
+        secondary1: "#6f5c71",
+        secondary: "#433443",
         secondary2: "#a096a3",
         tertiary: "#7C8D7E", //not yet
         primarydisabled: "#dbc7ef",
