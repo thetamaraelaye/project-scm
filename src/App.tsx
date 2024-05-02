@@ -6,6 +6,8 @@ import Signup from "./pages/auth/signup";
 import DashboardPage from "./pages/admin/dashboard";
 import Sidebar from "./component/SideBar/Sidebar";
 import SetUpAccount from "./pages/auth/setUpAccount";
+import SupplierSidebar from "./component/SideBar/supplierSideBar";
+import OverviewPage from "./pages/supplier/overview";
 // import AdminRoute from './component/PrivateRoutes/AdminRoutes';
 function App() {
   return (
@@ -35,6 +37,19 @@ function App() {
             path="admin/dashboard"
             element={<Sidebar title="Dashboard" children={<DashboardPage />} />}
           />
+
+          {/* Routes for the supply side of the application */}
+          {/* the onboarding page for supplier */}
+
+          {/* Overview page */}
+          <Route
+            path="supplier/overview"
+            element={
+              <SupplierSidebar title="Overview" children={<OverviewPage />} />
+            }
+          />
+
+          {/* Routes for employee side of the application */}
         </Routes>
       </Router>
     </div>
