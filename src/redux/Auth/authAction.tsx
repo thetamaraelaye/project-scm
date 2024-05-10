@@ -7,6 +7,12 @@ interface LoginCredentials {
     token: string;
   }
 
+interface SignUpCredentials {
+  token: string,
+  email: string,
+  password: string
+}
+
   export interface LoginApiResponse {
     // Define the properties you expect in the API response
     token: string;
@@ -44,3 +50,35 @@ interface LoginCredentials {
       }
     }
   );
+
+  export const userRegister = createAsyncThunk(
+    "signup",
+    async (credentials: SignUpCredentials, { rejectWithValue }) => {
+      try {
+        const res = await axios.post(`${apiUrl}auth/signup/`, {
+          email: credentials.email,
+          password: credentials.password,
+        });
+        if (res.status === 200) {
+          toast.success("Registration successful!", {
+            style: {
+              border: "1px solid #9437f1",
+              backgroundColor: " #9437f1",
+              color: "#FFFFFF",
+              fontSize: 14,
+            },
+            position: "bottom-right",
+          });
+          return res.data.data;
+        }
+      } catch (error: any) {
+        if (error.response && error.response.status === 400) {
+          toast.error("Invalid Credentials!");
+          return rejectWithValue(error);        
+        } else {
+          toast.error("Invalid Credentials!");
+          return rejectWithValue(error);
+        }
+      }
+    }
+  )

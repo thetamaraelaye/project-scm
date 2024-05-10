@@ -31,7 +31,7 @@ export const CardWithBorderStatus = ({
         >
           <div className="flex items-center justify-between">
             <div>
-              <h6 className="text-[#96A397] font-semibold text-sm">{title}</h6>
+              <h6 className="text-tertiary font-semibold text-sm">{title}</h6>
             </div>
             {hasStatus && (
               <div className="bg-[#FDDED4] rounded-[4px] text-[#B92043] text-xs font-medium py-1 px-2">
@@ -44,7 +44,7 @@ export const CardWithBorderStatus = ({
             {subtitle}
           </p>
   
-          <p className="mt-1 text-[#96A397] text-xs leading-4 font-medium">
+          <p className="mt-1 text-tertiary text-xs leading-4 font-medium">
             {description}
           </p>
   
