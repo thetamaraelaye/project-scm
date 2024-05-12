@@ -45,7 +45,7 @@ export default function Sidebar({ children, title }: sidebarType) {
 
   return (
     <>
-      <div className="hidden lg:flex h-screen bg-[#E8EDFF]">
+      <div className="hidden lg:flex h-screen bg-[#FFF4fc]">
         <div className="md:w-64 bg-[#fff] flex-shrink-0 overflow-y-scroll pt-[30px] sidebar_scroll">
           <div className="mb-3">
             <img
@@ -62,7 +62,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 onMouseLeave={() => setIsDashboardHover(false)}
                 className={
                   location.pathname.includes("/dashboard")
-                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] bg-white w-[98%] rounded-r-[8px]"
+                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] bg-primary w-[98%] rounded-r-[8px]"
                     : "px-[20.6px]  flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#010508] hover:text-[white] hover:bg-[#9437f1] w-[98%] rounded-[8px]"
                 }
               >
@@ -184,7 +184,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 onMouseLeave={() => setIsSupplierHover(false)}
                 className={
                   location.pathname === "/admin/suppliers/"
-                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] bg-white w-[98%] rounded-r-[8px]"
+                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] w-[98%] rounded-r-[8px] bg-primary"
                     : "px-[20.6px]  flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#010508] hover:text-[white] hover:bg-[#9437f1] w-[98%] rounded-[8px]"
                 }
               >
@@ -192,7 +192,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 // location.pathname.includes("profiles") ||
                 // location.pathname.includes("edit-profile") ||
                 isSupplierHover ? (
-                  <img src={SupplierIcon} alt="suppliers" className="" />
+                  <img src={SupplierIcon} alt="suppliers" className="bg-primary" />
                 ) : (
                   <img src={supplier_active} alt="suppliers" className="" />
                 )}
@@ -219,7 +219,7 @@ export default function Sidebar({ children, title }: sidebarType) {
 
           <div className="bg-[white] flex py-5 px-4 md:px-6 justify-between items-center">
             <div>
-              <div className="text-[#433443] font-semibold text-xsm">
+              <div className="text-primary font-semibold text-xsm">
                 {title}
               </div>
             </div>
