@@ -1,7 +1,6 @@
+import ProductTable from "../../../tables/Admin/Products";
 
-import SupplierTable from "../../../tables/Admin/Supplier";
-
-const SupplierPage = () => {
+const ProductPage = () => {
   return (
     <>
       <div className="flex flex-col text-justify gap-4">
@@ -11,9 +10,9 @@ const SupplierPage = () => {
         </div>
       </div>
       {/* Table */}
-      <SupplierTable />
+      <ProductTable />
     </>
   );
 };
 
-export default SupplierPage;
+export default ProductPage;

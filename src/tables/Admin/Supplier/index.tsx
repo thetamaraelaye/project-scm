@@ -1,11 +1,14 @@
-import React, { useState, useCallback, useMemo } from "react";
-import SearchComponent from "../../../component/Search";
-import { debounce } from "@mui/material";
+import React, { useState, 
+  //  useCallback, 
+   // useMemo
+ } from "react";
+//import SearchComponent from "../../../component/Search";
+//import { debounce } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const SupplierTable = () => {
-  const [searchValue, setSearchValue] = useState("");
-  const [loading, setLoading] = useState(false);
+//   const [searchValue, setSearchValue] = useState("");
+  const [loading] = useState(false);
   const navigate = useNavigate();
 
 
@@ -51,7 +54,7 @@ const SupplierTable = () => {
             "user_id": 104,
             "company_name": "K Tech",
             "supplier_name": "Folusho Oyedapo",
-            "status": "active",
+            "status": "Approved",
             "business_registration_id": "XYZ667891",
             "x_url": "https://ktech.xyz.com",
             "instagram_url": null,
@@ -69,7 +72,7 @@ const SupplierTable = () => {
             "user_id": 104,
             "company_name": "Veshe Tech",
             "supplier_name": "Steve O.",
-            "status": "approved",
+            "status": "Unapproved",
             "business_registration_id": "-",
             "x_url": "https://veshetech.xyz.com",
             "instagram_url": null,
@@ -87,7 +90,7 @@ const SupplierTable = () => {
             "user_id": 105,
             "company_name": "Harmony Digital",
             "supplier_name": "Harmony Sunday",
-            "status": "active",
+            "status": "U",
             "business_registration_id": "XYH456789",
             "x_url": "https://harmony_digital.xyz.com",
             "instagram_url": null,
@@ -105,22 +108,22 @@ const SupplierTable = () => {
 
   
 
-  const handleSearch = useMemo(
-    () =>
-      debounce((val: string) => {
-        console.log(val);
-      }, 750),
-    []
-  );
+//   const handleSearch = useMemo(
+//     () =>
+//       debounce((val: string) => {
+//         console.log(val);
+//       }, 750),
+//     []
+//   );
 
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      let val = e.target.value;
-      setSearchValue(val);
-      handleSearch(val);
-    },
-    [handleSearch]
-  );
+//   const handleChange = useCallback(
+//     (e: React.ChangeEvent<HTMLInputElement>) => {
+//       let val = e.target.value;
+//      // setSearchValue(val);
+//       handleSearch(val);
+//     },
+//     [handleSearch]
+//   );
 
   const supplierStatus = [
     {

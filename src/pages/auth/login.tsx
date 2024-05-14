@@ -175,6 +175,8 @@ const LoginPage = () => {
                   </div>
 
                   <div className="mt-6">
+                    <Link 
+                    to="/dashboard">
                     <button
                       type="submit"
                       disabled={values.email === "" || values.password === ""}
@@ -182,6 +184,8 @@ const LoginPage = () => {
                     >
                       Log In
                     </button>
+                    </Link>
+                   
                   </div>
                   <div className="text-center mt-3">
                     <p className="text-[#433443]   text-sm font-semibold">
