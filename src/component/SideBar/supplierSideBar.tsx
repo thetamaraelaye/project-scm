@@ -5,8 +5,8 @@ import notification_icon from "../../assets/icons/notification.svg";
 import logout_icon from "../../assets/icons/logout.svg";
 import product_active from "../../assets/icons/product_new.svg";
 import ProductIcon from "../../assets/icons/product.svg";
-import dashboard_active from "../../assets/icons/dashboard.svg";
-import DashboardIcon from "../../assets/icons/dashboard_white.svg";
+import { Dashboard } from "@mui/icons-material";
+// import DashboardIcon from "../../assets/icons/dashboard_white.svg";
 import cashflow_active from "../../assets/icons/cashflow_new.svg";
 import CashflowIcon from "../../assets/icons/cashflow.svg";
 import inventory_active from "../../assets/icons/inventory_new.svg";
@@ -24,7 +24,7 @@ type sidebarType = {
 
 export default function SupplierSidebar({ children, title }: sidebarType) {
   let location = useLocation();
-  const [isDashboardHover, setIsDashboardHover] = React.useState(false);
+ // const [isDashboardHover] = React.useState(false);
   const [isInventoryHover, setIsInventoryHover] = React.useState(false);
   const [isProductsHover, setIsProductsHover] = React.useState(false);
   const [isReportsHover, setIsReportsHover] = React.useState(false);
@@ -42,7 +42,7 @@ export default function SupplierSidebar({ children, title }: sidebarType) {
 
   return (
     <>
-      <div className="hidden lg:flex h-screen bg-[#E8EDFF]">
+      <div className="h-screen bg-[#E8EDFF]">
         <div className="md:w-64 bg-[#fff] flex-shrink-0 overflow-y-scroll pt-[30px] sidebar_scroll">
           <div className="mb-3">
             <img
@@ -55,22 +55,15 @@ export default function SupplierSidebar({ children, title }: sidebarType) {
             <section>
               <NavLink
                 to="/supplier/dashboard"
-                onMouseEnter={() => setIsDashboardHover(true)}
-                onMouseLeave={() => setIsDashboardHover(false)}
                 className={
                   location.pathname.includes("/dashboard")
                     ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] bg-white w-[98%] rounded-r-[8px]"
                     : "px-[20.6px]  flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#010508] hover:text-[white] hover:bg-[#9437f1] w-[98%] rounded-[8px]"
                 }
               >
-                {location.pathname.includes("/dashboard") ||
-                // location.pathname.includes("profiles") ||
-                // location.pathname.includes("edit-profile") ||
-                !isDashboardHover ? (
-                  <img src={dashboard_active} alt="dashboard" className="" />
-                ) : (
-                  <img src={DashboardIcon} alt="dashboard" className="" />
-                )}
+                
+                <Dashboard />
+
                 <p className="font-semibold text-sm capitalize leading-[18px]">
                   Dashboard
                 </p>

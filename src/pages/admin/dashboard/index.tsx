@@ -5,7 +5,7 @@ const DashboardPage = () => {
   return (
     <>
       <Header text="Dashboard"></Header>
-      <div className="bg-[#EBE9FE] px- py-4">
+      <div className="bg-[#EBE9FE] px-11 py-4 mb-[5%]">
         <div className="flex flex-row bg-white w-full">
           <div className="bg-[#8136cb] flex flex-row  text-[#F2F5F7] w-[55%] rounded-xl px-4 py-3">
             <div className="flex flex-col">
@@ -38,6 +38,49 @@ const DashboardPage = () => {
           </div>
         </div>
         <SalesOverview />
+        <div className="flex flex-row px-2 gap-5">
+          <div className="bg-white flex flex-col px-4 py-5 w-1/2 rounded-lg">
+            <h3>Best Selling Product</h3>
+            <table className="w-full">
+              <thead className="text-primary text-sm border-b-[#F7F7F7] border-b-2">
+                <tr>
+                  <th scope="col" className="px-4 py-4 font-semibold " >
+                    Item
+                  </th>
+                  <th scope="col" className="px-4 py-4 font-semibold ">
+                    Supplier
+                  </th>
+                  <th scope="col" className="px-4 py-4 font-semibold ">
+                    Quantity Sold
+                  </th>
+                  <th scope="col" className="px-4 py-4 font-semibold ">
+                    Amount
+                  </th>
+                  <th scope="col" className="px-4 py-4 font-semibold ">
+                    Category
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white text-sm cursor-pointer hover:bg-[#F3F1F4]"
+                    
+                >
+                  <td>Acer A15</td>
+                  <td>K-tech</td>
+                  <td>43</td>
+                  <td>NGN500,000</td>
+                  <td>Laptop</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="bg-white rounded-lg w-1/2">
+           
+            <div>
+
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

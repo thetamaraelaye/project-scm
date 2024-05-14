@@ -7,14 +7,14 @@ import product_active from "../../assets/icons/product_new.svg";
 import ProductIcon from "../../assets/icons/product.svg";
 import dashboard_active from "../../assets/icons/dashboard.svg";
 import DashboardIcon from "../../assets/icons/dashboard_white.svg";
-import cashflow_active from "../../assets/icons/cashflow_new.svg";
-import CashflowIcon from "../../assets/icons/cashflow.svg";
+// import cashflow_active from "../../assets/icons/cashflow_new.svg";
+// import CashflowIcon from "../../assets/icons/cashflow.svg";
 import inventory_active from "../../assets/icons/inventory_new.svg";
 import InventoryIcon from "../../assets/icons/inventory.svg";
 // import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 // import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import report_active from "../../assets/icons/reports_new.svg";
-import ReportIcon from "../../assets/icons/reports.svg";
+//import report_active from "../../assets/icons/reports_new.svg";
+//import ReportIcon from "../../assets/icons/reports.svg";
 import SupplierIcon from "../../assets/icons/supplier.svg";
 import supplier_active from "../../assets/icons/supplier_new.svg";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -30,9 +30,9 @@ export default function Sidebar({ children, title }: sidebarType) {
   const [isInventoryHover, setIsInventoryHover] = React.useState(false);
   const [isSupplierHover, setIsSupplierHover] = React.useState(false);
   const [isProductsHover, setIsProductsHover] = React.useState(false);
-  const [isReportsHover, setIsReportsHover] = React.useState(false);
-  const [isCashflowHover, setIsCashflowHover] = React.useState(false);
-  //const [isDocsHover, setIDocsHover] = React.useState(false);
+  //const [isReportsHover, setIsReportsHover] = React.useState(false);
+  // const [isCashflowHover, setIsCashflowHover] = React.useState(false);
+  // //const [isDocsHover, setIDocsHover] = React.useState(false);
 
   //const { first_name, last_name } = useAppSelector((state) => state.auth);
 
@@ -45,7 +45,7 @@ export default function Sidebar({ children, title }: sidebarType) {
 
   return (
     <>
-      <div className="hidden lg:flex h-screen bg-[#E8EDFF]">
+      <div className="hidden lg:flex h-screen bg-[#FFF4fc]">
         <div className="md:w-64 bg-[#fff] flex-shrink-0 overflow-y-scroll pt-[30px] sidebar_scroll">
           <div className="mb-3">
             <img
@@ -62,7 +62,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 onMouseLeave={() => setIsDashboardHover(false)}
                 className={
                   location.pathname.includes("/dashboard")
-                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] bg-white w-[98%] rounded-r-[8px]"
+                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[white] bg-primary w-[98%] rounded-r-[8px]"
                     : "px-[20.6px]  flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#010508] hover:text-[white] hover:bg-[#9437f1] w-[98%] rounded-[8px]"
                 }
               >
@@ -70,9 +70,9 @@ export default function Sidebar({ children, title }: sidebarType) {
                 // location.pathname.includes("profiles") ||
                 // location.pathname.includes("edit-profile") ||
                 !isDashboardHover ? (
-                  <img src={dashboard_active} alt="dashboard" className="" />
-                ) : (
                   <img src={DashboardIcon} alt="dashboard" className="" />
+                ) : (
+                  <img src={dashboard_active} alt="dashboard" className="" /> 
                 )}
                 <p className="font-semibold text-sm capitalize leading-[18px]">
                   Dashboard
@@ -85,7 +85,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 onMouseLeave={() => setIsInventoryHover(false)}
                 className={
                   location.pathname.includes("/inventory")
-                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] bg-white w-[98%] rounded-r-[8px]"
+                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[white] bg-primary w-[98%] rounded-r-[8px]"
                     : "px-[20.6px]  flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#010508] hover:text-[white] hover:bg-[#9437f1] w-[98%] rounded-[8px]"
                 }
               >
@@ -119,7 +119,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                   Products
                 </p>
               </NavLink>
-
+{/* 
               <NavLink
                 to="/admin/cashflow"
                 onMouseEnter={() => setIsCashflowHover(true)}
@@ -138,7 +138,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 <p className="font-semibold text-sm capitalize leading-[18px]">
                   Cashflow
                 </p>
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 to="/admin/orders"
                 className={
@@ -155,7 +155,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 </p>
               </NavLink>
 
-              <NavLink
+              {/* <NavLink
                 to="/admin/reports/"
                 onMouseEnter={() => setIsReportsHover(true)}
                 onMouseLeave={() => setIsReportsHover(false)}
@@ -176,7 +176,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 <p className="font-semibold text-sm capitalize leading-[18px]">
                   Reports
                 </p>
-              </NavLink>
+              </NavLink> */}
 
               <NavLink
                 to="/admin/suppliers/"
@@ -184,7 +184,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 onMouseLeave={() => setIsSupplierHover(false)}
                 className={
                   location.pathname === "/admin/suppliers/"
-                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#011E2D] bg-white w-[98%] rounded-r-[8px]"
+                    ? "pl-[26.6px] flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[white] w-[98%] rounded-r-[8px] bg-primary"
                     : "px-[20.6px]  flex gap-[18.5px] items-center  mb-[13px] py-[13px]  text-[#010508] hover:text-[white] hover:bg-[#9437f1] w-[98%] rounded-[8px]"
                 }
               >
@@ -192,7 +192,7 @@ export default function Sidebar({ children, title }: sidebarType) {
                 // location.pathname.includes("profiles") ||
                 // location.pathname.includes("edit-profile") ||
                 isSupplierHover ? (
-                  <img src={SupplierIcon} alt="suppliers" className="" />
+                  <img src={SupplierIcon} alt="suppliers" className="bg-primary" />
                 ) : (
                   <img src={supplier_active} alt="suppliers" className="" />
                 )}
@@ -219,7 +219,7 @@ export default function Sidebar({ children, title }: sidebarType) {
 
           <div className="bg-[white] flex py-5 px-4 md:px-6 justify-between items-center">
             <div>
-              <div className="text-[#433443] font-semibold text-xsm">
+              <div className="text-primary font-semibold text-xsm">
                 {title}
               </div>
             </div>
@@ -230,13 +230,13 @@ export default function Sidebar({ children, title }: sidebarType) {
               </div>
               <div className="bg-[#9F50ED] flex justify-center items-center w-[32px] h-[32px] rounded-full">
                 <p className="text-white text-xs font-medium">
-                  {"T "} {"U"}
+                  {"T "} {"E"}
                   {/* {last_name ? last_name.charAt(0).toUpperCase() : "U"} */}
                 </p>
               </div>
               <div className="flex items-center gap-2 cursor-pointer relative">
                 <p className="text-[#433443] text-sm font-medium">
-                  {"Test"} {"User"}
+                  {"Tamara"} {"Elaye"}
                 </p>
               </div>
             </div>
