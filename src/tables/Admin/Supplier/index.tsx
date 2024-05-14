@@ -206,9 +206,9 @@ const SupplierTable = () => {
         </ul>
         <div className="flex flex-row gap-3 justify-end">
           {/* <button className="bg-white border border-primary text-primary px-4 py-2 rounded-lg ">Approve</button> */}
-          <button className="bg-primary text-white px-4 py-2 rounded-lg ">
+          {/* <button className="bg-primary text-white px-4 py-2 rounded-lg ">
             Add Supplier
-          </button>
+          </button> */}
         </div>
       </div>
       {/* table */}
