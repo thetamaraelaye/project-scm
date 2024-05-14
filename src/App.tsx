@@ -9,6 +9,8 @@ import SetUpAccount from "./pages/auth/setUpAccount";
 import SupplierSidebar from "./component/SideBar/supplierSideBar";
 import OverviewPage from "./pages/supplier/overview";
 import SupplierPage from "./pages/admin/Suppliers";
+import InventoryPage from "./pages/admin/Inventory/index";
+
 // import AdminRoute from './component/PrivateRoutes/AdminRoutes';
 function App() {
   return (
@@ -41,6 +43,10 @@ function App() {
            <Route
             path="/admin/suppliers"
             element={<Sidebar title="Suppliers" children={<SupplierPage />} />}
+          />
+           <Route
+            path="/admin/inventory"
+            element={<Sidebar title="Inventory" children={<InventoryPage/>} />}
           />
 
           {/* Routes for the supply side of the application */}

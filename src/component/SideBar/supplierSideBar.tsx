@@ -42,7 +42,7 @@ export default function SupplierSidebar({ children, title }: sidebarType) {
 
   return (
     <>
-      <div className="hidden lg:flex h-screen bg-[#E8EDFF]">
+      <div className="h-screen bg-[#E8EDFF]">
         <div className="md:w-64 bg-[#fff] flex-shrink-0 overflow-y-scroll pt-[30px] sidebar_scroll">
           <div className="mb-3">
             <img
